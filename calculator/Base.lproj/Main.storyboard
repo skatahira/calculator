@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,229 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mogura1" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-6b-CDg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZw-FI-NWM">
+                                <rect key="frame" x="40" y="466" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWh-EB-gz2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-Lx-kvz">
+                                <rect key="frame" x="128" y="466" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ni-2h-V6N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l1-So-34a">
+                                <rect key="frame" x="216" y="466" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1U-Jj-fbr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzx-F8-mUQ">
+                                <rect key="frame" x="304" y="466" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="×"/>
+                                <connections>
+                                    <action selector="inputOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeV-Je-FKu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajE-XJ-8bb">
+                                <rect key="frame" x="304" y="378" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="÷"/>
+                                <connections>
+                                    <action selector="inputOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBg-mc-EcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNs-n9-eEv">
+                                <rect key="frame" x="40" y="378" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="AC"/>
+                                <connections>
+                                    <action selector="clickAC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdU-Is-4UI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDr-9Z-guC">
+                                <rect key="frame" x="304" y="554" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="−"/>
+                                <connections>
+                                    <action selector="inputOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZY-Vh-pFP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUf-ZY-XB8">
+                                <rect key="frame" x="304" y="642" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="＋"/>
+                                <connections>
+                                    <action selector="inputOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJ9-fo-AYc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-tl-FbF">
+                                <rect key="frame" x="304" y="730" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="＝"/>
+                                <connections>
+                                    <action selector="inputResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ei-pD-R3E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvF-xD-mmj">
+                                <rect key="frame" x="40" y="554" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O2-dL-JfF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CX1-jX-xQV">
+                                <rect key="frame" x="40" y="730" width="168" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omA-q7-kel"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srv-dI-J1t">
+                                <rect key="frame" x="128" y="642" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RA3-Nb-ZXB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZv-Gd-sae">
+                                <rect key="frame" x="216" y="642" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aei-ig-Ndd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cws-1P-p5x">
+                                <rect key="frame" x="216" y="730" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="."/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKa-Gw-9af"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrm-bQ-xgE">
+                                <rect key="frame" x="128" y="554" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8t-UF-BnE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OS-aA-6AL">
+                                <rect key="frame" x="216" y="554" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfs-eM-ctb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJB-op-Hvh">
+                                <rect key="frame" x="59" y="89" width="335" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2S-ax-b1I">
+                                <rect key="frame" x="59" y="147" width="335" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ez-Xe-2kO">
+                                <rect key="frame" x="20" y="205" width="374" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIe-w1-pvB">
+                                <rect key="frame" x="20" y="147" width="54" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2y-ky-WWe">
+                                <rect key="frame" x="40" y="642" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="inputFormula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoC-TJ-8gt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="arithmeticLabel" destination="OIe-w1-pvB" id="WfC-ck-INl"/>
+                        <outlet property="button0" destination="CX1-jX-xQV" id="Pxg-05-fIl"/>
+                        <outlet property="button1" destination="i2y-ky-WWe" id="AWY-76-8MD"/>
+                        <outlet property="button2" destination="Srv-dI-J1t" id="CUP-lD-aoi"/>
+                        <outlet property="button3" destination="vZv-Gd-sae" id="VFT-Ds-Akj"/>
+                        <outlet property="button4" destination="LvF-xD-mmj" id="m4I-2k-3TG"/>
+                        <outlet property="button5" destination="vrm-bQ-xgE" id="30f-mZ-fMK"/>
+                        <outlet property="button6" destination="0OS-aA-6AL" id="rLy-2c-ZCh"/>
+                        <outlet property="button7" destination="wZw-FI-NWM" id="C7M-cu-Cih"/>
+                        <outlet property="button8" destination="dmr-Lx-kvz" id="qOx-Hk-5On"/>
+                        <outlet property="button9" destination="0l1-So-34a" id="dqY-tB-kPe"/>
+                        <outlet property="buttonAddition" destination="CUf-ZY-XB8" id="uuk-1h-Ma8"/>
+                        <outlet property="buttonDecimal" destination="Cws-1P-p5x" id="gGw-Nr-9Qt"/>
+                        <outlet property="buttonDivision" destination="ajE-XJ-8bb" id="Rda-7l-sql"/>
+                        <outlet property="buttonEqual" destination="gUk-tl-FbF" id="CyY-FJ-zBD"/>
+                        <outlet property="buttonMultiplication" destination="tzx-F8-mUQ" id="UuC-Gm-QoL"/>
+                        <outlet property="buttonSubtraction" destination="gDr-9Z-guC" id="MBY-Qs-s8b"/>
+                        <outlet property="firstNumber" destination="jJB-op-Hvh" id="fLv-Py-fOG"/>
+                        <outlet property="resultNumber" destination="2ez-Xe-2kO" id="ESu-Jj-HOy"/>
+                        <outlet property="secondNumber" destination="v2S-ax-b1I" id="YUb-NQ-FcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mogura1" width="360" height="428"/>
+    </resources>
 </document>
